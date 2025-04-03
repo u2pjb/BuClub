@@ -1,0 +1,82 @@
+<p-dialog
+  [header]="header"
+  [(visible)]="display"
+  [modal]="true"
+  [closable]="false"
+>
+  <div class="column gap-1 form-wrapper" [formGroup]="memberForm">
+    <div class="row gap-05">
+      <span class="phone-label">First name:</span>
+      <input type="text" formControlName="firstname" />
+    </div>
+
+    <div class="row gap-05">
+      <span class="phone-label">Last name:</span>
+      <input type="text" formControlName="lastname" />
+    </div>
+
+    <div class="row gap-05">
+      <span class="phone-label">Address 1:</span>
+      <input type="text" formControlName="addressline1" />
+    </div>
+    <div class="row gap-05">
+      <span class="phone-label">Address 2:</span>
+      <input type="text" formControlName="addressline2" />
+    </div>
+    <div class="row gap-05">
+      <span class="phone-label">Address 3:</span>
+      <input type="text" formControlName="addressline3" />
+    </div>
+    <div class="row gap-05">
+      <span class="phone-label">Address 4:</span>
+      <input type="text" formControlName="addressline4" />
+    </div>
+    <div class="row gap-05">
+      <span class="phone-label">Postcode:</span>
+      <input type="text" formControlName="postcode" />
+    </div>
+
+    <div class="row gap-05">
+      <span class="phone-label">Phone:</span>
+      <input type="text" formControlName="phonenumber" />
+    </div>
+
+    <div class="row gap-05">
+      <span class="phone-label">Email:</span>
+      <input type="text" formControlName="email" />
+    </div>
+
+    <div class="row gap-05">
+      <span class="phone-label">Paid:</span>
+      <div class="paidInput">
+        <input type="text" formControlName="paid" />
+        <button (click)="onPaidPlus()">+</button>
+        <button >-</button>
+        <button (click)="onPaidHon()">H</button>
+      </div>
+    </div>
+
+    <div class="row gap-05">
+      <span class="phone-label">Notes:</span>
+      <input type="text" formControlName="notes" />
+    </div>
+  </div>
+
+  <p-footer>
+    <button
+      type="button"
+      pButton
+      icon="pi pi-check"
+      (click)="onConfirm()"
+      label="Confirm"
+      [class.disabled]="!memberForm.valid"
+    ></button>
+    <button
+      type="button"
+      pButton
+      icon="pi pi-times"
+      (click)="onCancel()"
+      label="Cancel"
+    ></button>
+  </p-footer>
+</p-dialog>

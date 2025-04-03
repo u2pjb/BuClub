@@ -1,0 +1,37 @@
+
+server: node server.js
+buClub: ng serve
+
+------
+ TODO
+------
+> shorten emails on display 
+  > have button to copy whole email to clipboard?
+
+> add search/ filter options on main page 
+  > live filter as you type?
+
+> edit scrn:
+  > disable field for paid      done
+  > add button to ++            done
+  > add button to +H            done
+  > add button to set unpaid
+
+> export to csv/excel
+
+> move back end to a db (sql, or something new? nosql? mongo?)
+
+------
+ DONE
+------
+> arrange vertically 
+
+> centre align list on page
+
+> field for paid for current year or not
+  >just be a year field, if its >= current year then they good 
+
+> check mark next to name
+   -gold - honorary
+   -green - paid
+   -red - unpaid

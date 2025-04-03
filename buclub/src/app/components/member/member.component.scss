@@ -1,0 +1,53 @@
+.wrapper {
+  width: 500px;
+  display: flex;
+  background-color: rgb(241, 241, 241);
+
+  img {
+    aspect-ratio: 1;
+    object-fit: contain;
+    width: 75px;
+    border-radius: 15px;
+    background-color: grey;
+  }
+
+
+
+  .memButton {
+    height: 30px;
+  }
+
+  .nameplate {
+    width: 300px;
+    flex: 1;
+  }
+
+  .buttongrp {
+    gap: 1rem;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .phone-label {
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  .phone-value {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .email-label {
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  .email-value {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}

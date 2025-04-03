@@ -1,0 +1,47 @@
+<div class="colummn gap-1">
+  <!--add member btn-->
+  <button
+    type="button"
+    pButton
+    icon="pi pi-plus"
+    (click)="toggleAddPopup()"
+    label="Add member"
+    class="add-member-btn"
+  ></button>
+
+  <!-- members -->
+  <div class="colummn wrap gap-05 membList">
+    <app-member
+      *ngFor="let member of members"
+      [member]="member"
+      class="memberItem"
+      (edit)="toggleEditPopup($event)"
+      (delete)="toggleDeletePopup($event)"
+    >
+    </app-member>
+  </div>
+
+  <!--paginator-->
+  <p-paginator
+    [rows]="rows"
+    [totalRecords]="totalRecords"
+    [rowsPerPageOptions]="[5, 10, 20]"
+    (onPageChange)="onPageChange($event)"
+    #paginator
+  ></p-paginator>
+</div>
+
+<!--edit member-->
+<app-edit-popup
+  [member]="selectedMember"
+  [(display)]="displayEditPopup"
+  (confirm)="onConfirmEdit($event)"
+  header="Edit Member"
+></app-edit-popup>
+
+<!--add member-->
+<app-edit-popup
+  [(display)]="displayAddPopup"
+  (confirm)="onConfirmAdd($event)"
+  header="Add Member"
+></app-edit-popup>

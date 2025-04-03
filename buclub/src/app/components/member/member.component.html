@@ -1,0 +1,48 @@
+<div class="row wrapper gap-1">
+  <div class="column ">
+    <img [src]="member.image" alt="member img" />
+  </div>
+
+  <div class="column nameplate">
+   <div class="row gap-05"> <h2
+      class="title row gap-05"
+      title="{{ member.firstname }} {{ member.lastname }}">
+      {{ member.firstname + " " + member.lastname | truncateName : 16 : "..." }}
+    </h2>
+    <div>
+      <app-member-status [paid]="member.paid"></app-member-status>
+    </div>
+</div>
+
+    <div class="row gap-05">
+      <span class="phone-label">P: </span>
+      <span class="phone-value">{{ member.phonenumber }}</span>
+    </div>
+    <div class="row gap-05">
+      <span class="email-label">E: </span>
+      <span class="email-value">{{ member.email }}</span>
+    </div>
+  </div>
+
+  <div class="column gap-05 buttongrp">
+    <button
+      type="button"
+      pButton
+      icon="pi pi-pencil"
+      (click)="editMember()"
+
+      class="row memButton"
+    ></button>
+    <button
+      type="button"
+      pButton
+      icon="pi pi-trash"
+      (click)="confirmDelete()"
+ 
+      class="p-button-danger row memButton"
+      #deleteButton
+    ></button>
+  </div>
+</div>
+
+<p-confirmPopup></p-confirmPopup>
